@@ -41,7 +41,7 @@ With your repository folder open in VS Code:
 
 ## Reminders
 
-Details matter - check spelling, capitalization, plurals, spacing when things don't match.
+Details matter - check spelling, capitalization, plural, spacing when things don't match.
 
 ## Resources
 
