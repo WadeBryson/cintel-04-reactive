@@ -40,7 +40,7 @@ def get_flights_server_functions(input, output, session):
     reactive_df = reactive.Value()
 
     @reactive.Effect
-    @reactive.event(input.FLIGHTS_DATE_RANGE)
+    @reactive.event(input.FLIGHTS_DATE_RANGE, input.FLIGHT_PASS_NUM)
     def _():
         """Reactive effect to update the filtered dataframe when inputs change.
         It doesn't need a name, because no one calls it directly."""
@@ -65,6 +65,14 @@ def get_flights_server_functions(input, output, session):
         input_min = input_range[0]
         input_max = input_range[1]
         df = df[(df["Date"] >= input_min) & (df["Date"] <= input_max)]
+
+        # Passenger Count Filter
+        input_range = input.FLIGHT_PASS_NUM()
+        input_min = input_range[0]
+        input_max = input_range[1]
+        pass_count_filter = (df["passengers"] >= input_min) & (
+            df["passengers"] <= input_max)
+        df = df[pass_count_filter]
 
         # logger.debug(f"filtered flights df: {df}")
         reactive_df.set(df)
