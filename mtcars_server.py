@@ -48,7 +48,7 @@ def get_mtcars_server_functions(input, output, session):
         You must be familiar with the dataset to know the column names.
         """
 
-        filtered_df = df[(df["mpg"] >= input_min) & (df["mpg"] <= input_max) & ()]
+        df = df[(df["mpg"] >= input_min) & (df["mpg"] <= input_max)]
 
         # Maximum HP Filter
         max_HP_filter = df["hp"] <= input.MTCARS_MAX_HP()
