@@ -32,7 +32,7 @@ def get_mtcars_server_functions(input, output, session):
     reactive_df = reactive.Value()
 
     @reactive.Effect
-    @reactive.event(input.MTCARS_MPG_RANGE, input.MTCARS_MAX_HP)
+    @reactive.event(input.MTCARS_MPG_RANGE, input.MTCARS_MAX_HP, input.Auto_Transmission, input.Manual_Transmission)
     def _():
         df = original_df.copy()
 
@@ -53,6 +53,17 @@ def get_mtcars_server_functions(input, output, session):
         # Maximum HP Filter
         max_HP_filter = df["hp"] <= input.MTCARS_MAX_HP()
         df = df[max_HP_filter]
+
+        # Transmission Type Filter
+        transmission_type_list = []
+        if input.Auto_Transmission():
+            transmission_type_list.append(0)
+        if input.Manual_Transmission():
+            transmission_type_list.append(1)
+        transmission_filter = df["am"].isin(transmission_type_list)
+        df = df[transmission_filter]
+     
+    
 
         # Set the reactive value
         reactive_df.set(df)
