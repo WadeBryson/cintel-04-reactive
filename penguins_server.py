@@ -42,6 +42,7 @@ def get_penguins_server_functions(input, output, session):
         input.PENGUIN_SPECIES_Chinstrap,
         input.PENGUIN_SPECIES_Gentoo,
         input.PENGUIN_GENDER,
+        input.Island
     )
     def _():
         """Reactive effect to update the filtered dataframe when inputs change.
@@ -83,6 +84,13 @@ def get_penguins_server_functions(input, output, session):
         if input_gender != "a":
             gender_filter = df["sex"] == gender_dict[input_gender]
             df = df[gender_filter]
+        
+        # Home Island Filter
+        input_island = input.Island()
+        island_dict = {"a": "All", "b": "Briscoe", "d": "Dream", "t": "Torgensen"}
+        if input_island != "a":
+            island_filter = df["island"] == island_dict[input_island]
+            df = df[island_filter]
 
         # logger.debug(f"filtered penguins df: {df}")
         reactive_df.set(df)
