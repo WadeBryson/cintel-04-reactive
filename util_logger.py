@@ -1,7 +1,7 @@
 """
 Purpose: Set up logging once and reuse it. 
 
-Author: Denise Case
+Author: Wade Bryson
 
 This file automatically records your work so you don't have to. 
 Analysts and data scientists will work hard once, to be lazy later.
