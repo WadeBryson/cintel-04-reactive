@@ -33,7 +33,7 @@ from util_logger import setup_logger
 logger, logname = setup_logger(__name__)
 
 app_ui = ui.page_navbar(
-    shinyswatch.theme.lumen(),
+    shinyswatch.theme.darkly(),
     ui.nav(
         "Flights",
         ui.layout_sidebar(
