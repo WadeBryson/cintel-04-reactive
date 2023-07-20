@@ -87,7 +87,7 @@ def get_penguins_server_functions(input, output, session):
         
         # Home Island Filter
         input_island = input.Island()
-        island_dict = {"a": "All", "b": "Briscoe", "d": "Dream", "t": "Torgensen"}
+        island_dict = {"a": "All", "b": "Biscoe", "d": "Dream", "t": "Torgersen"}
         if input_island != "a":
             island_filter = df["island"] == island_dict[input_island]
             df = df[island_filter]
