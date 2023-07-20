@@ -25,6 +25,13 @@ def get_flights_inputs():
             start=date(1949, 1, 1),
             end=date(1960, 12, 31),
         ),
+        ui.input_slider(
+            "FLIGHT_PASS_NUM",
+            "Passengers Onboard",
+            min=100,
+            max=650,
+            value=[100, 650],
+        ),
         ui.tags.hr(),
         ui.p("🕒 Please be patient. Outputs may take a few seconds to load."),
         ui.tags.hr(),
