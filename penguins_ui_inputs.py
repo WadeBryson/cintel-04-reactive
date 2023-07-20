@@ -34,6 +34,12 @@ def get_penguins_inputs():
             {"a": "All (includes missing values)", "f": "Female", "m": "Male"},
             selected="a",
         ),
+        ui.input_radio_buttons(
+            "Island",
+            "Select Penguin Home Islands",
+            {"a": "All Islands", "b": "Biscoe", "d": "Dream", "t": "Torgersen"},
+            selected = "a",
+        ),
         ui.tags.hr(),
         ui.p("🕒 Please be patient. Outputs may take a few seconds to load."),
         ui.tags.hr(),
