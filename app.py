@@ -28,12 +28,43 @@ from relationships_server import get_relationships_server_functions
 from relationships_ui_inputs import get_relationships_inputs
 from relationships_ui_outputs import get_relationships_outputs
 
+from NE_DATA_server import get_NE_DATA_server_functions
+from NE_DATA_ui_inputs import get_NE_DATA_inputs
+from NE_DATA_ui_outputs import get_NE_DATA_outputs
+
 from util_logger import setup_logger
 
 logger, logname = setup_logger(__name__)
 
 app_ui = ui.page_navbar(
     shinyswatch.theme.darkly(),
+    ui.nav(
+        "Home",
+        ui.layout_sidebar(
+            ui.panel_sidebar(
+                ui.h2("Project 7 - Custom Reactive App"),
+                ui.tags.hr(),
+                ui.h3("Author - Wade Bryson"),
+                ui.h4("Class - 44630 Continuous Intelligence and Interactive Analytics"),
+                ui.h4("Summer 2023 OP Block 2")),
+                ui.tags.hr(),
+        ),
+            ui.panel.main(
+                ui.h2("Nuclear Explosions Interactive Dataset (NE_DATA)"),
+                ui.h2("Flights Interactive Dataset (Flights)"),
+                ui.h2("Cars Interactive Dataset (MT_Cars)"),
+                ui.h2("Penguins Interactive Dataset (Penguins)"),
+                ui.h2("Relationships (Relationships)"),
+                ui.tags.hr(),
+        ),
+    ),
+    ui.nav(
+        "NE_DATA",
+        ui.layout_sidebar(
+            get_NE_DATA_inputs(),
+            get_NE_DATA_outputs(),
+        ),
+    ),
     ui.nav(
         "Flights",
         ui.layout_sidebar(
@@ -75,6 +106,7 @@ def server(input, output, session):
     """Define functions to create UI outputs."""
 
     logger.info("Starting server...")
+    get_NE_DATA_server_functions(input, output, session)
     get_flights_server_functions(input, output, session)
     get_mtcars_server_functions(input, output, session)
     get_penguins_server_functions(input, output, session)
