@@ -37,27 +37,7 @@ from util_logger import setup_logger
 logger, logname = setup_logger(__name__)
 
 app_ui = ui.page_navbar(
-    shinyswatch.theme.darkly(),
-    ui.nav(
-        "Home",
-        ui.layout_sidebar(
-            ui.panel_sidebar(
-                ui.h2("Project 7 - Custom Reactive App"),
-                ui.tags.hr(),
-                ui.h3("Author - Wade Bryson"),
-                ui.h4("Class - 44630 Continuous Intelligence and Interactive Analytics"),
-                ui.h4("Summer 2023 OP Block 2")),
-                ui.tags.hr(),
-        ),
-            ui.panel.main(
-                ui.h2("Nuclear Explosions Interactive Dataset (NE_DATA)"),
-                ui.h2("Flights Interactive Dataset (Flights)"),
-                ui.h2("Cars Interactive Dataset (MT_Cars)"),
-                ui.h2("Penguins Interactive Dataset (Penguins)"),
-                ui.h2("Relationships (Relationships)"),
-                ui.tags.hr(),
-        ),
-    ),
+    shinyswatch.theme.darkly(), 
     ui.nav(
         "NE_DATA",
         ui.layout_sidebar(
