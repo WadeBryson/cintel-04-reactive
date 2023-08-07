@@ -18,4 +18,28 @@ results = df.head(10)
 
 new_df = df[["WEAPON SOURCE COUNTRY"]]
 results2 = new_df.head(10)
-print(results2)
+# print(results2)
+
+show_countries_list = []
+show_countries_list.append("FRANCE")
+show_countries_list.append("CHINA")
+
+country_filter = df["WEAPON SOURCE COUNTRY"].isin(show_countries_list)
+df3 = df[country_filter]
+results3 = df3.head(10)
+# print(results3)
+
+plotly_plot = px.scatter(
+            df,
+            x="Date.Year",
+            y="Data.Yeild.Upper",
+            color="WEAPON SOURCE COUNTRY",
+            title="Nuclear Explosions Chart",
+            labels={
+                "Date.Year": "Year",
+                "Data.Yield.Upper": "Kilotons of TNT",
+            },
+            #TODO Bigger?
+            size_max=8,
+        )
+print(plotly_plot)

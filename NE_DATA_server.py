@@ -97,7 +97,7 @@ def get_NE_DATA_server_functions(input, output, session):
         plotly_plot = px.scatter(
             df,
             x="Date.Year",
-            y="Data.Yield.Upper",
+            y="Data.Yeild.Upper",
             color="WEAPON SOURCE COUNTRY",
             title="Nuclear Explosions Chart",
             labels={
