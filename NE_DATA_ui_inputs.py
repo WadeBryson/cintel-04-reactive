@@ -25,6 +25,6 @@ def get_NE_DATA_inputs():
         # ui.tags.hr(),
         # ui.input_numeric("NE_MIN_EXPLOSION", "Minimum Explosion Yield (kilotons of TNT):", value=0.0),
         # ui.tags.hr(),
-        # ui.p("🕒 Please be patient. Outputs may take a few seconds to load."),
-        # ui.tags.hr(),
+        ui.p("🕒 Please be patient. Outputs may take a few seconds to load."),
+        ui.tags.hr(),
     )

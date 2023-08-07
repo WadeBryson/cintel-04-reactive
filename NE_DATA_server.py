@@ -102,7 +102,7 @@ def get_NE_DATA_server_functions(input, output, session):
             title="Nuclear Explosions Chart",
             labels={
                 "Date.Year": "Year",
-                "Data.Yield.Upper": "Kilotons of TNT",
+                "Data.Yeild.Upper": "Kilotons of TNT",
             },
             #TODO Bigger?
             size_max=8,

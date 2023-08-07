@@ -37,7 +37,7 @@ plotly_plot = px.scatter(
             title="Nuclear Explosions Chart",
             labels={
                 "Date.Year": "Year",
-                "Data.Yield.Upper": "Kilotons of TNT",
+                "Data.Yeild.Upper": "Kilotons of TNT",
             },
             #TODO Bigger?
             size_max=8,
