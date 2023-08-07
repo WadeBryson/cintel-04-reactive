@@ -61,7 +61,7 @@ def get_NE_DATA_server_functions(input, output, session):
         if input.NE_Country_INDIA():
             show_countries_list.append("INDIA")
         show_countries_list = show_countries_list or ["USA", "USSR", "FRANCE", "UK", "CHINA", "PAKIS", "INDIA"]
-        country_filter = df["Weapon Source Country"].isin(show_countries_list)
+        country_filter = df["WEAPON SOURCE COUNTRY"].isin(show_countries_list)
         df = df[country_filter]
 
         # Year Select Filter
@@ -98,7 +98,7 @@ def get_NE_DATA_server_functions(input, output, session):
             df,
             x="Date.Year",
             y="Data.Yield.Upper",
-            color="Weapon Source Country",
+            color="WEAPON SOURCE COUNTRY",
             title="Nuclear Explosions Chart",
             labels={
                 "Date.Year": "Year",
