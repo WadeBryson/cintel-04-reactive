@@ -64,17 +64,6 @@ def get_NE_DATA_server_functions(input, output, session):
         country_filter = df["WEAPON SOURCE COUNTRY"].isin(show_countries_list)
         df = df[country_filter]
 
-        # Year Select Filter
-        # input_range = input.NE_YEAR_RANGE()
-        # input_min = input_range[0]
-        # input_max = input_range[1]
-        # year_filter = (df["Date.Year"] >= input_min) & (df["Date.Year"] <= input_max)
-        # df = df[year_filter]
-
-        # Minimum Explosion Yield Filter
-        # min_explosion_filter = df["Data.Yield.Upper"] >= input.NE_MIN_EXPLOSION()
-        # df = df[min_explosion_filter]
-
         reactive_df.set(df)
 
     @output
