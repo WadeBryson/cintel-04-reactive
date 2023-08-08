@@ -22,6 +22,10 @@ def get_NUKE_server_functions(input, output, session):
     reactive_df = reactive.Value()
 
     # Deleted Reactive Event
+    @reactive.Effect
+    @reactive.event(
+        input.Country
+    )
 
     def _():
         """Reactive effect to update the filtered dataframe when inputs change.
@@ -33,6 +37,11 @@ def get_NUKE_server_functions(input, output, session):
         df = original_df.copy()
 
         # Deleted Filter
+        input_country = input.Country()
+        country_dict = {"a": "All Countries", "b": "USA", "c": "USSR", "d": "UK"}
+        if input_country != "a":
+            country_filter = df["WEAPON SOURCE COUNTRY"] == country_dict[input_country]
+            df = df[country_filter]
 
         reactive_df.set(df)
 
