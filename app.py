@@ -28,20 +28,10 @@ from relationships_server import get_relationships_server_functions
 from relationships_ui_inputs import get_relationships_inputs
 from relationships_ui_outputs import get_relationships_outputs
 
-from NE_DATA_server import get_NE_DATA_server_functions
-from NE_DATA_ui_inputs import get_NE_DATA_inputs
-from NE_DATA_ui_outputs import get_NE_DATA_outputs
 
 
 app_ui = ui.page_navbar(
     shinyswatch.theme.darkly(), 
-    ui.nav(
-        "NE_DATA",
-        ui.layout_sidebar(
-            get_NE_DATA_inputs(),
-            get_NE_DATA_outputs(),
-        ),
-    ),
     ui.nav(
         "Flights",
         ui.layout_sidebar(
@@ -82,7 +72,6 @@ app_ui = ui.page_navbar(
 def server(input, output, session):
     """Define functions to create UI outputs."""
 
-    get_NE_DATA_server_functions(input, output, session)
     get_flights_server_functions(input, output, session)
     get_mtcars_server_functions(input, output, session)
     get_penguins_server_functions(input, output, session)
