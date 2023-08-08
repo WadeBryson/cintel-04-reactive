@@ -21,13 +21,8 @@ def get_NUKE_server_functions(input, output, session):
     # Create a reactive value to hold the filtered pandas dataframe
     reactive_df = reactive.Value()
 
-    # Create a reactive effect to set the reactive value when inputs change
-    # List all the inputs that should trigger this update
+    # Deleted Reactive Event
 
-    @reactive.Effect
-    @reactive.event(
-        input.NUKE_YEAR_RANGE,
-    )
     def _():
         """Reactive effect to update the filtered dataframe when inputs change.
         This is the only way to set a reactive value (after initialization).
@@ -37,16 +32,8 @@ def get_NUKE_server_functions(input, output, session):
 
         df = original_df.copy()
 
-        # Body mass is a range
-        input_range = input.NUKE_YEAR_RANGE()
-        input_min = input_range[0]
-        input_max = input_range[1]
-        body_mass_filter = (df["Date.Year"] >= input_min) & (
-            df["Date.Year"] <= input_max
-        )
-        df = df[body_mass_filter]
+        # Deleted Filter
 
-        # logger.debug(f"filtered penguins df: {df}")
         reactive_df.set(df)
 
     @output
