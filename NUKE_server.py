@@ -60,28 +60,8 @@ def get_NUKE_server_functions(input, output, session):
         filtered_df = reactive_df.get()
         return filtered_df
 
-    @output
-    @render_widget
-    def NUKE_output_widget1():
-        df = reactive_df.get()
-        plotly_plot = px.scatter(
-            df,
-            x="Date.Year",
-            y="Data.Yeild.Upper",
-            color="WEAPON SOURCE COUNTRY",
-            title="Penguins Plot (Plotly Express))",
-            labels={
-                "Date.Year": "Year",
-                "Data.Yeild.Upper": "Explosion Size (kilotons of TNT)",
-            },
-            size_max=8,
-        )
-
-        return plotly_plot
-
     # return a list of function names for use in reactive outputs
     return [
         NUKE_record_count_string,
         NUKE_filtered_table,
-        NUKE_output_widget1,
     ]
