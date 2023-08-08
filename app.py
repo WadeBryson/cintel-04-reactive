@@ -28,6 +28,10 @@ from relationships_server import get_relationships_server_functions
 from relationships_ui_inputs import get_relationships_inputs
 from relationships_ui_outputs import get_relationships_outputs
 
+from NUKE_server import get_NUKE_server_functions
+from NUKE_ui_inputs import get_NUKE_inputs
+from NUKE_ui_outputs import get_NUKE_outputs
+
 
 
 app_ui = ui.page_navbar(
@@ -37,6 +41,13 @@ app_ui = ui.page_navbar(
         ui.layout_sidebar(
             get_flights_inputs(),
             get_flights_outputs(),
+        ),
+    ),
+    ui.nav(
+        "NUKE",
+        ui.layout_sidebar(
+            get_NUKE_inputs(),
+            get_NUKE_outputs(),
         ),
     ),
     ui.nav(
