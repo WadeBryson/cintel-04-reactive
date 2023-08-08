@@ -32,9 +32,6 @@ from NE_DATA_server import get_NE_DATA_server_functions
 from NE_DATA_ui_inputs import get_NE_DATA_inputs
 from NE_DATA_ui_outputs import get_NE_DATA_outputs
 
-from util_logger import setup_logger
-
-logger, logname = setup_logger(__name__)
 
 app_ui = ui.page_navbar(
     shinyswatch.theme.darkly(), 
@@ -85,7 +82,6 @@ app_ui = ui.page_navbar(
 def server(input, output, session):
     """Define functions to create UI outputs."""
 
-    logger.info("Starting server...")
     get_NE_DATA_server_functions(input, output, session)
     get_flights_server_functions(input, output, session)
     get_mtcars_server_functions(input, output, session)
