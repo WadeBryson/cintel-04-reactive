@@ -25,7 +25,7 @@ def get_NUKE_server_functions(input, output, session):
     @reactive.Effect
     @reactive.event(
         input.Country,
-        input.NUKE_MIN_Explosion
+        input.NUKE_MIN_EXPLOSION
     )
 
     def _():
