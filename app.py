@@ -83,6 +83,7 @@ app_ui = ui.page_navbar(
 def server(input, output, session):
     """Define functions to create UI outputs."""
 
+    get_NUKE_server_functions(input, output, session)
     get_flights_server_functions(input, output, session)
     get_mtcars_server_functions(input, output, session)
     get_penguins_server_functions(input, output, session)
