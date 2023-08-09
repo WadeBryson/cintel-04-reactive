@@ -40,7 +40,7 @@ def get_NUKE_server_functions(input, output, session):
         input_country = input.Country()
         country_dict = {"a": "All Countries", "b": "USA", "c": "USSR", "d": "UK"}
         if input_country != "a":
-            country_filter = df["WEAPON SOURCE COUNTRY"] == country_dict[input_country]
+            country_filter = df["Country"] == country_dict[input_country]
             df = df[country_filter]
 
         reactive_df.set(df)

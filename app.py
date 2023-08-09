@@ -35,7 +35,7 @@ from NUKE_ui_outputs import get_NUKE_outputs
 
 
 app_ui = ui.page_navbar(
-    shinyswatch.theme.darkly(), 
+    shinyswatch.theme.lumen(), 
     ui.nav(
         "Flights",
         ui.layout_sidebar(

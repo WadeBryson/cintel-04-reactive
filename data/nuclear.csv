@@ -1,4 +1,4 @@
-WEAPON SOURCE COUNTRY,WEAPON DEPLOYMENT LOCATION,Location.Cordinates.Latitude,Location.Cordinates.Longitude,Data.Yeild.Upper,Data.Name,Date.Year
+Country,Location,Latitude,Longitude,Explosion.(kilotons),Data.Name,Year
 USA,Alamogordo,32.54,-105.57,21,Trinity,1945
 USA,Hiroshima,34.23,132.27,15,Littleboy,1945
 USA,Nagasaki,32.45,129.52,21,Fatman,1945
