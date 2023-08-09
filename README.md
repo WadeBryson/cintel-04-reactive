@@ -4,19 +4,7 @@
 #### Module 7 Project 7: Custom Project
 
 ## Project Description
-Creating an app with Shiny Apps that contains Interactive Datasets.
-
-## Resources
-- [Seaborn](https://seaborn.pydata.org/)
-- [Plotly](https://plotly.com/python/)
-- [Bokeh](https://docs.bokeh.org/en/latest/index.html)
-- [Seaborn Flights Dataset](https://seaborn.pydata.org/tutorial/data_structure.html)
-
-## Datasets
-![Flights](./images/01-flights.PNG)
-![MT Cars](./images/02-mtcars.PNG)
-![Penguins](./images/03-penguins.PNG)
-![Relationships](./images/04-relationships.PNG)
+Creating a Custom Reactive app with Shiny Apps that contains multiple Interactive Datasets.
 
 ## Portfolio of Other Projects
 | Index | Class                               | Project Link                                                                                                      |
