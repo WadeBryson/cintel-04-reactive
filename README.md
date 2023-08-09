@@ -1,61 +1,29 @@
-# Continuous Intelligence and Interactive Analytics - Reactive Apps
+# 44620-Web-Mining-Final
+#### Author: Wade Bryson  
+#### Class: 44-620 Web Mining and Applied NLP
+#### Module 7 Project 7: Custom Project
 
-- Interactive app: [cintel-04-reactive](https://wadebryson.shinyapps.io/cintel-04-reactive/)
-- Repository: [cintel-04-reactive](https://github.com/WadeBryson/cintel-04-reactive)
-- Author: [Wade Bryson](https://github.com/WadeBryson)
-
------
-
-## Copy This Repository
-
-Copy this starter repository into your own GitHub account by clicking the 'Fork' button at the top of this page. 
-
------
-
-## Customize Your Web App
-
-### Get the Code to your Local Machine
-    
-1. Open VS Code and from the menu, select **View** / **Command Palette**.
-1. Type "Git: Clone" in the command palette and select it.
-1. Enter the URL (web address) of your forked GitHub repository (make sure it contains your GitHub username - not denisecase).
-1. Choose a directory on your local machine (e.g., Documents folder) to store the project.
-1. If prompted, sign in to GitHub from VS Code.
-
-### Make Changes in VS Code
-
-With your repository folder open in VS Code:
-
-1. Click on this README.md file for editing.
-1. Update the README.md file by changing your name in the author link above.
-1. Update the links in the README.md file to your username instead of denisecase.
-
-### Save Your Changes
-
-1. After making changes, you want to send them back to GitHub.
-1. In VS Code, find the "Source Control" icon and click it.
-1. Important: Enter a brief commit message describing your changes.
-1. Change the "Commit" button dropdown to "Commit and Push" to send your changes back to GitHub.
-
------
-
-## Reminders
-
-Details matter - check spelling, capitalization, plural, spacing when things don't match.
+## Project Description
+Creating an app with Shiny Apps that contains Interactive Datasets.
 
 ## Resources
-
 - [Seaborn](https://seaborn.pydata.org/)
 - [Plotly](https://plotly.com/python/)
 - [Bokeh](https://docs.bokeh.org/en/latest/index.html)
 - [Seaborn Flights Dataset](https://seaborn.pydata.org/tutorial/data_structure.html)
 
------
-
+## Datasets
 ![Flights](./images/01-flights.PNG)
-
 ![MT Cars](./images/02-mtcars.PNG)
-
 ![Penguins](./images/03-penguins.PNG)
-
 ![Relationships](./images/04-relationships.PNG)
+
+## Portfolio of Other Projects
+| Index | Class                               | Project Link                                                                                                      |
+|-------|-------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| 1     | 44-608 Data Analytics Fundamentals  | [Project 6 - Create Your Own Project (NA Basketball Analysis)](https://github.com/WadeBryson/datafun-06-projects) |
+| 2     | 44-608 Data Analytics Fundamentals  | [Project 7 - Into to Machine Learning](https://github.com/WadeBryson/datafun-07-ml-predictive)                    |
+| 3     | 44-661 Databases for Analytics      | [Project 6 - Creating a Custom Data Warehouse](https://tinyurl.com/Custom-Data-Warehouse)                         |
+| 4     | 44-661 Databases for Analytics      | [Project 7 - Show Us Your Data (SQL Database)](https://app.vidgrid.com/view/Ibcb4KH9G4OR)                         |
+| 5     | 44-620 Web Mining and NLP           | [Project 7 - Taylor Swift Sentiment Analysis](https://github.com/WadeBryson/44620-Web-Mining-Final)               |
+| 6     | 44-630 Continuous Intelligence      | [Project 7 - Custom Reactive App w/ Shiny](https://github.com/WadeBryson/cintel-04-reactive)                      |
