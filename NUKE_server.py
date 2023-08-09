@@ -36,12 +36,16 @@ def get_NUKE_server_functions(input, output, session):
 
         df = original_df.copy()
 
-        # Deleted Filter
+        # Country Filter
         input_country = input.Country()
-        country_dict = {"a": "All Countries", "b": "USA", "c": "USSR", "d": "UK"}
+        country_dict = {"a": "All Countries", "b": "USA", "c": "USSR", "d": "UK", "e": "PAKIST", "f": "INDIA", "g": "FRANCE", "h": "CHINA"}
         if input_country != "a":
             country_filter = df["Country"] == country_dict[input_country]
             df = df[country_filter]
+        
+        # Minimum Explosion Filter
+        NUKE_EXPLOSION_filter = df["Explosion.(kilotons)"] >= input.NUKE_MIN_EXPLOSION()
+        df = df[NUKE_EXPLOSION_filter]
 
         reactive_df.set(df)
 
