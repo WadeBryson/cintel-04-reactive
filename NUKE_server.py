@@ -60,9 +60,9 @@ def get_NUKE_server_functions(input, output, session):
         # logger.debug(f"filter message: {message}")
         return message
     
-    @output
-    @render_widget
-    def NUKE_output_widget1():
+    # @output
+    # @render_widget
+    # def NUKE_output_widget1():
         df = reactive_df.get()
         plotly_plot = Map(basemap=basemaps.OpenStreetMap.Mapnik, center=(25,0), zoom=2)
         for i in range(0, len(df)):
@@ -81,5 +81,4 @@ def get_NUKE_server_functions(input, output, session):
     return [
         NUKE_record_count_string,
         NUKE_filtered_table,
-        NUKE_output_widget1,
     ]

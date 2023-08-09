@@ -7,8 +7,8 @@ def get_NUKE_outputs():
         ui.h2("Main Panel with Reactive Output"),
         ui.tags.hr(),
         ui.tags.section(
-            ui.h3("Nuclear Explosions World Map"),
-            output_widget("NUKE_output_widget1"),
+            # ui.h3("Nuclear Explosions World Map"),
+            # output_widget("NUKE_output_widget1"),
             ui.h3("Filtered Nuclear Explosions Table"),
             ui.output_text("NUKE_record_count_string"),
             ui.output_table("NUKE_filtered_table"),

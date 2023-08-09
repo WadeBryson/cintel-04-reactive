@@ -73,7 +73,7 @@ app_ui = ui.page_navbar(
     ),
     ui.nav(ui.a("About", href="https://github.com/WadeBryson")),
     ui.nav(ui.a("GitHub", href="https://github.com/WadeBryson/cintel-04-reactive")),
-    ui.nav(ui.a("App", href="https://wadebryson.shinyapps.io/cintel-04-reactive1/")),
+    ui.nav(ui.a("App", href="https://wadebryson.shinyapps.io/cintel-04-reactive/")),
     ui.nav(ui.a("Examples", href="https://shinylive.io/py/examples/")),
     ui.nav(ui.a("Widgets", href="https://shiny.rstudio.com/py/docs/ipywidgets.html")),
     title=ui.h1("Wade Bryson Dashboard"),
