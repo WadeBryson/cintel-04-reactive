@@ -37,6 +37,13 @@ from NUKE_ui_outputs import get_NUKE_outputs
 app_ui = ui.page_navbar(
     shinyswatch.theme.darkly(), 
     ui.nav(
+        "MT_Cars",
+        ui.layout_sidebar(
+            get_mtcars_inputs(),
+            get_mtcars_outputs(),
+        ),
+    ),
+    ui.nav(
         "Flights",
         ui.layout_sidebar(
             get_flights_inputs(),
@@ -48,13 +55,6 @@ app_ui = ui.page_navbar(
         ui.layout_sidebar(
             get_NUKE_inputs(),
             get_NUKE_outputs(),
-        ),
-    ),
-    ui.nav(
-        "MT_Cars",
-        ui.layout_sidebar(
-            get_mtcars_inputs(),
-            get_mtcars_outputs(),
         ),
     ),
     ui.nav(
