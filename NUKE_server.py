@@ -4,6 +4,7 @@ from shiny import render, reactive
 import pandas as pd
 from shinywidgets import render_widget
 import plotly.express as px
+from ipyleaflet import Map, basemaps, Marker
 
 from util_logger import setup_logger
 
@@ -24,7 +25,8 @@ def get_NUKE_server_functions(input, output, session):
     # Deleted Reactive Event
     @reactive.Effect
     @reactive.event(
-        input.Country
+        input.Country,
+        input.NUKE_MIN_Explosion
     )
 
     def _():
@@ -57,6 +59,17 @@ def get_NUKE_server_functions(input, output, session):
         message = f"Showing {filtered_count} of {total_count} records"
         # logger.debug(f"filter message: {message}")
         return message
+    
+    @output
+    @render_widget
+    def NUKE_output_widget1():
+        df = reactive_df.get()
+        plotly_plot = Map(basemap=basemaps.OpenStreetMap.Mapnik, center=(25,0), zoom=2)
+        for i in range(0, len(df)):
+            marker = Marker(location= ([df.iloc[i]['Latitude'], df.iloc[i]['Longitude']]), draggable=False)
+            plotly_plot.add_layer(marker)
+
+        return plotly_plot
 
     @output
     @render.table
@@ -68,4 +81,5 @@ def get_NUKE_server_functions(input, output, session):
     return [
         NUKE_record_count_string,
         NUKE_filtered_table,
+        NUKE_output_widget1,
     ]
